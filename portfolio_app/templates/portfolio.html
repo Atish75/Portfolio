@@ -1,0 +1,584 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atish Tiwari - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero-section">
+        <!-- Animated Background Blobs -->
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Side - Text Content -->
+                <div class="hero-text fade-in-left">
+                    <span class="greeting">Hello, I'm</span>
+                    <h1 class="hero-title">Atish Tiwari</h1>
+                    <p class="hero-subtitle">Full Stack Developer </p>
+                    <p class="hero-description">
+                        From backend architecture to crafting beautiful, 
+                        functional digital experiences that make a difference - driven 
+                        by a passion for clean code and elegant design
+                    </p>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://github.com/theguy75" target="_blank" class="social-icon" title="GitHub">
+                            <i data-lucide=""></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/atish-tiwari/" target="_blank" class="social-icon" title="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empiretheguy75@gmail.com" class="social-icon" title="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+
+                    <button onclick="scrollToSection('contact')" class="cta-button">
+                        Get In Touch
+                    </button>
+                </div>
+
+                <!-- Right Side - Profile Image -->
+                <div class="hero-image fade-in-right">
+                    <div class="image-wrapper">
+                        <div class="image-glow"></div>
+                        <img src="{% static 'profile-pic.png' %}" 
+                             alt="Atish" 
+                             class="profile-image">
+                        <div class="decorative-blob decorative-blob-1"></div>
+                        <div class="decorative-blob decorative-blob-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- About Text -->
+            <div class="about-content fade-in">
+                <p class="about-text">
+                    I’m a Full-Stack Developer and Computer Science undergraduate at Sister Nivedita University, focused on building robust 
+                    backend architectures and clean, responsive web applications
+                </p>
+                <p class="about-text">
+                    I enjoy bridging the gap between scalable systems and intuitive user interfaces—whether it’s crafting REST APIs, handling 
+                    data workflows, or delivering end-to-end digital solutions that solve real problems.
+                </p>
+                <p class="about-text">
+                    Always curious, constantly refining my craft, and eager to tackle challenging engineering problems.
+                </p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="features-grid">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.1s">
+                    <div class="feature-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3 class="feature-title">Clean Code</h3>
+                    <p class="feature-description">Writing maintainable, scalable code that stands the test of time</p>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.2s">
+                    <div class="feature-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="feature-title">Creative Design</h3>
+                    <p class="feature-description">Blending aesthetics with functionality for exceptional user experiences</p>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.3s">
+                    <div class="feature-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 class="feature-title">Fast Performance</h3>
+                    <p class="feature-description">Optimizing every detail for lightning-fast load times</p>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.4s">
+                    <div class="feature-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3 class="feature-title">User-Focused</h3>
+                    <p class="feature-description">Putting users first in every decision and design choice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-category fade-in-up" style="animation-delay: 0.1s">
+                    <h3 class="category-title gradient-blue">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React Js </span>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-blue" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-blue" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-blue" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-blue" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category fade-in-up" style="animation-delay: 0.2s">
+                    <h3 class="category-title gradient-purple">Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Django/Rest API</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-purple" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Flask</span>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-purple" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PostgreSQL/ MySQl/ Oracle</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-purple" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-purple" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Skills -->
+                <div class="skill-category fade-in-up" style="animation-delay: 0.3s">
+                    <h3 class="category-title gradient-pink">Design</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-pink" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">UI/UX Design</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-pink" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-pink" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Prototyping</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-pink" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Skills -->
+                <div class="skill-category fade-in-up" style="animation-delay: 0.4s">
+                    <h3 class="category-title gradient-green">Tools</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git/Github</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-green" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Shell Script</span>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-green" data-progress="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Cloud Storage</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-green" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CI/CD</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress gradient-green" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in-up" style="animation-delay: 0.1s">
+                    <div class="project-image">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.fS0MnF0TEc6oG591JoC8NQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                             alt="Rent Ride">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Rent Ride</h3>
+                        <p class="project-description">
+                            Concurrency/Transaction locking for double-booking prevention, role-based access.
+                            Recruiters backend architecture and system design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Django RestFrameWork</span>
+                            <span class="tag">React Js</span>
+                            <span class="tag">PostgreSQL/</span>
+                            <span class="tag">CLoudinary</span>
+                            <span class="tag">Simple JWT</span>
+                            <span class="tag">WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Atish75/Rent-Ride-Backend" target="_blank" class="project-link">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://rent-ride-frontend-dash.vercel.app" target="_blank" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in-up" style="animation-delay: 0.2s">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzY5MjIyMTk0fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Task Management App">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dynamic Payment QR Genrator</h3>
+                        <p class="project-description">
+                            It takes info of UPI id,name,amount,from user and generate
+                            otp.It is real world QR which opens your upi app after scanning or
+                            clicking pay now button
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Sqlite</span>
+                            <span class="tag">Payments</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/theguy75/Dynamic_Payment_QR_generator" target="_blank" class="project-link">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://dynamic-payment-qr-generator.onrender.com" target="_blank" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in-up" style="animation-delay: 0.3s">
+                    <div class="project-image">
+                        <img src="https://bejoseholo.github.io/img/Screenshot_1.png" 
+                             alt="Portfolio Dashboard">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Loan Approval Analyzer</h3>
+                        <p class="project-description">
+                            It is useful to Bank for checking the loan application using Machine Learning. 
+                            It Helps to people to know why their loan applications are rejected and how they can correct thier application.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Scikit Learn</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">SHAP</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">FinTech</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Atish75/AI-Loan-Approval-Analyzer" target="_blank" class="project-link">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://ai-loan-approval-analyzer.onrender.com" target="_blank" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left Side - Contact Info -->
+                <div class="contact-info-wrapper">
+                    <!-- Contact Information -->
+                    <div class="contact-info-box fade-in-left">
+                        <h3 class="info-box-title">Contact Information</h3>
+                        <div class="contact-items">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=empiretheguy75@gmail.com" class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">empiretheguy75@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="tel:+919674040946" class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+91 9674040946</p>
+                                </div>
+                            </a>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">West Bengal , India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-box fade-in-left" style="animation-delay: 0.2s">
+                        <h3 class="info-box-title">Follow Me</h3>
+                        <div class="social-grid">
+                            <a href="https://github.com/Atish75" target="_blank" class="social-card">
+                                <i data-lucide="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/atish-tiwari" target="_blank" class="social-card social-linkedin">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://instagram.com/atish_tiwari75" target="_blank" class="social-card social-instagram">
+                                <i data-lucide="instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://leetcode.com/u/Atish75/" target="_blank" class="social-card social-leetcode">
+                                <i data-lucide="code"></i>
+                                <span>Leetcode</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form-wrapper fade-in-right">
+                    <h3 class="info-box-title">Send a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer fade-in">
+                <p>&copy; 2026 Atish Tiwari. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="{% static 'portfolio.js' %}"></script>
+    <script>
+    // Lucide icons initialize karein
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+    // Contact Form AJAX Handler
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const submitBtn = this.querySelector(".submit-button");
+      const originalText = submitBtn.innerText;
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Sending...";
+
+      const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+      const formData = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        subject: document.getElementById("subject").value.trim(),
+        message: document.getElementById("message").value.trim(),
+      };
+
+      try {
+        const response = await fetch("/send-email/", {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrfToken
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        alert(result.message);
+
+        if (response.ok) {
+          this.reset();
+        }
+      } catch (error) {
+        alert("Error sending message: " + error.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalText;
+      }
+    });
+    </script>
+</body>
+</html>
