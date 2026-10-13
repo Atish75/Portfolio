@@ -76,32 +76,32 @@ function animateSkillBars(skillCategory) {
 // CONTACT FORM HANDLING
 // ============================================
 // Handle form submission
-const contactForm = document.getElementById('contactForm');
+// const contactForm = document.getElementById('contactForm');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent actual form submission
+// if (contactForm) {
+//     contactForm.addEventListener('submit', (e) => {
+//         e.preventDefault(); // Prevent actual form submission
         
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+//         // Get form values
+//         const name = document.getElementById('name').value;
+//         const email = document.getElementById('email').value;
+//         const subject = document.getElementById('subject').value;
+//         const message = document.getElementById('message').value;
         
-        // Log form data (in a real application, you would send this to a server)
-        console.log('Form Submitted:');
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Subject:', subject);
-        console.log('Message:', message);
+//         // Log form data (in a real application, you would send this to a server)
+//         console.log('Form Submitted:');
+//         console.log('Name:', name);
+//         console.log('Email:', email);
+//         console.log('Subject:', subject);
+//         console.log('Message:', message);
         
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
+//         // Show success message
+//         alert('Thank you for your message! I will get back to you soon.');
         
-        // Reset form
-        contactForm.reset();
-    });
-}
+//         // Reset form
+//         contactForm.reset();
+//     });
+// }
 
 // ============================================
 // SCROLL PROGRESS INDICATOR (OPTIONAL)
